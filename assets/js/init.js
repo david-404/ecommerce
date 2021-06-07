@@ -14,13 +14,16 @@ window.onload = () =>{
                        console.log(res.data);
                     })
 
-                   
+                   let getValue = response.data[index[0]];
 
                    
                  let displayValue = (innerValue) => {
-                   if(innerValue == "") {
-                       result = innerValue+response.result;
-                       response = result+innerValue.value
+                   if(getValue !== "") {
+                       getValue.forEach(async (item, index) => {
+                           await Pull(response.data)
+                           
+                       });
+                       
                    }
                    
                   }
